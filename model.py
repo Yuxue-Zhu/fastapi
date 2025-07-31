@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, func
 from sqlalchemy.ext.asyncio import AsyncAttrs
 from sqlalchemy.orm import declarative_base, relationship
+from pydantic import BaseModel
 
 Base = declarative_base()
 
@@ -23,3 +24,8 @@ class Log(AsyncAttrs, Base):
     login_time = Column(DateTime, server_default=func.now())
 
     user = relationship("User", back_populates="logs")
+
+
+class LoginRequest(BaseModel):
+    email: str
+    password: str
