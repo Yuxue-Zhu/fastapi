@@ -38,4 +38,5 @@ Have 10000 users spawned at the rate 100/s running for 150s:
    ```bash 
    locust -f loadtest.py --headless -u 10000 -r 100 --run-time 150s --host http://localhost:8000
    ```
-   ![Result](Screenshot 2025-07-31 at 12.59.24.png)
+<img width="1277" height="283" alt="Screenshot 2025-07-31 at 12 43 59" src="https://github.com/user-attachments/assets/e6cc55ba-eb0e-4081-8fee-ec88d9ad707e" />
+
